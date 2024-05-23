@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+
+    <!-- Font เอาจากไหนก็ได้ Ex. Google Font , cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- custom css ตกแต่งหน้าผุ้ใช้งาน -->
+    <link rel="stylesheet" href="style/style for about.css">
+</head>
+
+
+<body>
+    <!-- header section (start) -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="image\icon.jpg" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <!-- <a href="#menu">menu</a> -->
+            <a href="product.html">products</a>
+            <a href="Contact.html">contact</a>
+            <!-- <a href="#blogs">blogs</a> -->
+
+        </nav>
+
+        <div class="nav-icons">
+            <div class="fa-solid fa-search" id="search-btn"></div>
+            <div class="fa-solid fa-shopping-cart" id="shopping-cart-btn"></div>
+            <div class="fa-solid fa-user" id="register-btn"></div>
+            <div class="fa-solid fa-bars" id="menu-btn"></div>
+            <!-- กำหนดรูปแบบ icons ; fa-solid (รูปแบบ style) , fa-search (ชื่อ icon ที่จะใช้) -->
+            <!-- หาจาก web : font-awesome -->
+
+        </div>
+
+        <!-- <div class="nav-icons">
+        <a href="#search"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAftJREFUSEu1lUurTQEUgL8vMtBFUR4TIWHgFSUDV3GLUKYexYAUhQFl4AeQCd0uYUAhKT9ARgohE6RElBIZkEvk/Vha2VfnPvbZu+45a3jOPuvb6/GtI20O25yfUkBETAU2AWuBBcWL3AeuAJfUV3VebhAgIsYCF4D1TRIEcBnYpn5pBuoHiIjRwF1gLvAdOA10q88zSUTMAPYBO4BRxbOd6s8yyEDAeWAL8BJYrT4e6ocRMR+4CkwBjqr7KwERMQ94CPwClqjZ79KIiOXAdeAHMF19PdTD/yuIiB5gN3Bc3VNngBFxEdgMHFQPVwGeATOz/+qjmoAVwDXgppoVDYrGCj4DOeQR6p+agPHAO6BXnVAF+AiMATrUhFVGRHQAn4C36sQqwINCqMXqvcrs/9Z2KXAn26R2VQGOAAeAU+qumoBzwFagR91bBZgFPAF+11zTTuBGkbS06oGinUn9gRfAKvVpiWgLC9Empe3qzkrRilPQeCq+ASeBY2qanT3PKvNUbAdGFklzBml9Drt8Tfu+iYhxQAq0rskcPgCHgI3AIiCtX6nm5/2i2bmeVli6Bsjb8xXI7boNnFDfR0R6kKLlOc8t7FJ7GwnD/sMpILeAOUBeg2Xqmz7IsAHFbFKy3KjZOR/1bEsBBWQysEHtbmmLqoRsSYuaQdoO+AvzmbYZWyFxxwAAAABJRU5ErkJggg=="/></a>
+        <a href="#shopping-cart"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAW9JREFUSEvNlS9MllEUh59nDoNGNkdzZGkGSSaLgUagyDAxsVBkJDaim1EZgTG1OILNQCGYnAQTBIvFwqbBsREY4efu9n3s84P3D3v9nKe84fzuec65v3vvKyMOR1yffwdIkt40J8CWuvw3pjufYADQr/tA3esKubBFSVaA58AHdWYUgHHgCLgG3Fa/d4FcanKSt8CjDoV31LmyvgowDXzqADhUpyoBJZHkALgDLKhv2sCSFN08sKoWH6vvQZJFYBPYV+81AZLcBH4C14EJ9UcT4AZQROV7V/1SB0nyGNgGdtWHfW3tTU7yEngKvFZLgcpI8hG4D8ypO20BxYPixSlwSz2+jJBkEvgG/OrpzloBemb3O3umvqgArANrxTP1yaCm8bFLUs7zuyaTe/lp9fNVAWPAV6BsQ128V2eHBY0TtOy8UtYKkOQVsARsqOVUnUddrvYeDBXp/ytQ/2hq8Jkfzl0FMNoJuvjQyoP/GvAbwaCDGboeRcIAAAAASUVORK5CYII="/></a>
+        <a href="#register"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjVJREFUSEu1lT1vE0EQht+5iynujBV7ziYCQZMCSip+AHICJqIkiIpfgITAUqgQ6QjCgoKelo+SRIkIHyUtHaJIAyIQzJ4t4zshx3eD1hBkO3c+c5G33Zn3eWd2Z5cw4UUT1sdYAM91LwK4A5HZniGiLQC37UJhLclgIqDtukskcjdKSIBqlrk2CjIS0FbqHAEbAL6JyBLC8GVPzDDmiWgFwIyIlLOO8zoOMhLgKbUJoEzAZYv5Wb+Ir9SiAE8BrNvMF9ICGgCmrSA4TKVSu1+k1Wqxubv7A8C2zXwsLWAHQCnIZJxcLqdiADs280xagO75HAGLFvPzmBZt2MyVVICBQyaqSqezaZimKURzRHQPwJEDHbJ25St1QwAtZg65DAioWswPU1/TvcRWvX7SNIybAOYh0gXRmyAMa7li8eOBBy1JIGk/dg4ajcb0oTDUrs8AOK1v05DYdwDvAbzzw7BWLBZ/RsEiAZ7rViDyWB9iksO/+9sicjXrOK+G4/cBPNddgMhqL1DkBUSWO1NTW/l8vtmf3Kuw252FYSwDWOiFA5Uss35a/q0BQLPZzGeC4IN2TiIrluPcGqcCX6n7Auh2fv0FnGLm1l7eAMBX6roAD4jorVUonB1H/E+hQr7r6qEsk8g1y3EeRQI8pfSDdilpeKLAbaXOE7AuwJMs85U4wCcAxzuGkR/ueVI1Xr1+FIbxBcBnm/lEHED0hs2c+BFFAT2l9uWnEkqqJvYW/U/iuLETr+A3vaXkGQdP5hMAAAAASUVORK5CYII="/></a>
+        <a href="#menu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFFJREFUSEvtlEkKADAIA83/H52eu1APZQShnquTBaqAR/D9+IA04fqIbDuVdXkgaRK9OcABL+pPu/Ud4A7wDnAAHlF/AN4BDujfwXewJoD/pgNrVBgZX2h0sgAAAABJRU5ErkJggg==" id="menu"/></a>
+    </div> -->
+        <div class="register-form">
+            <a href="#" class="logo">
+                <img src="image\icon.jpg" alt="">
+            </a>
+            <!-- <div class="register-icons">
+            <div class="fa-solid fa-facebook" id="facebook-btn"></div>
+        <div class="fa-solid fa-instagram" id="instagram-btn"></div>
+        <div class="fa-solid fa-line" id="line-btn"></div>
+        </div> -->
+            <!-- <div class="fa-solid fa-facebook" id="facebook-btn"></div>
+        <div class="fa-solid fa-instagram" id="instagram-btn"></div>
+        <div class="fa-solid fa-line" id="line-btn"></div> -->
+            <h3><a href="#">Enter your email to join us or sign in</a>
+                <h3>
+                    <h4>รับส่วนลด และสินค้าเฉพาะสมาชิก เมื่อคุณลงทะเบียนกับ Pattani Fishing</h4>
+                    <div class="register-icons">
+                        <a href="https://www.facebook.com/" class="fa-brands fa-facebook" id="facebook-btn"></a>
+                        <a href="https://www.instagram.com/accounts/emailsignup/" class="fa-brands fa-instagram"
+                            id="instagram-btn"></a>
+                        <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1397264795%26redirect_uri%3Dhttps%253A%252F%252Fcreator.line.me%252Fsignup%252Fline_callback%26state%3DEzGHjCqHpa5h9hG7CNbtk2COjR8VhmWf%26scope%3Dprofile&loginChannelId=1397264795&loginState=fKvxoXycv9lAmP0JGU1MEX#/"
+                            class="fa-brands fa-line" id="line-btn"></a>
+                        <!-- <div class="fa-brands fa-facebook" id="facebook-btn" ></div>
+            <div class="fa-brands fa-instagram" id="instagram-btn"></div>
+            <div class="fa-brands fa-line" id="line-btn"></div> -->
+                    </div>
+                    <input type="search" id="register-box" placeholder="put your email here...">
+                    <label for="register-box" class="fa-solid fa-search"></label>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fa-solid fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 1 " alt="">
+                <div class="content">
+                    <h3>cart item 1</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 1</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 2 " alt="">
+                <div class="content">
+                    <h3>cart item 2</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 2</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 3 " alt="">
+                <div class="content">
+                    <h3>cart item 3</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 3</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 4 " alt="">
+                <div class="content">
+                    <h3>cart item 4</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 4</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 5 " alt="">
+                <div class="content">
+                    <h3>cart item 5</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 5</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 6 " alt="">
+                <div class="content">
+                    <h3>cart item 6</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 6</div>
+
+                </div>
+            </div>
+            <a href="#" class="btn">check out</a>
+
+        </div>
+    </header>
+    <!-- header section (end) -->
+
+
+    <!-- hone section (start) -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>pattani</span> fishing </h1>
+
+        <div class="pic">
+
+            <img src="image/About_Pic for main.jpg" class="image" alt="#">
+
+            <div class="content">
+
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos dolorum consectetur odio
+                    adipisci recusandae.</h3>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora modi veniam culpa ipsam
+                    architecto enim iusto pariatur dolor, quod dignissimos! Hic fugit ullam quibusdam totam blanditiis
+                    sunt id consequuntur?</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem itaque commodi, impedit
+                    explicabo deserunt consectetur laborum maxime rerum, animi delectus eum sequi quas suscipit culpa
+                    modi. Velit accusantium aut a.</p>
+
+            </div>
+
+        </div>
+
+        <a href="#" class="btn">learn more</a>
+    </section>
+    <!-- hone section (end) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js เพิ่มลูกเล่นให้ web -->
+    <script src="script/script.js"></script>
+
+    <!-- <footer>
+    <p> </p>
+</footer> -->
+
+
+
+
+</body>
+
+</html>

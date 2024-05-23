@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+
+    <!-- Font เอาจากไหนก็ได้ Ex. Google Font , cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- custom css ตกแต่งหน้าผุ้ใช้งาน -->
+    <link rel="stylesheet" href="style/style for contact.css">
+</head>
+
+
+<body>
+    <!-- header section (start) -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="image\icon.jpg" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <!-- <a href="#menu">menu</a> -->
+            <a href="product.html">products</a>
+            <a href="Contact.html">contact</a>
+            <!-- <a href="#blogs">blogs</a> -->
+
+        </nav>
+
+        <div class="nav-icons">
+            <div class="fa-solid fa-search" id="search-btn"></div>
+            <div class="fa-solid fa-shopping-cart" id="shopping-cart-btn"></div>
+            <div class="fa-solid fa-user" id="register-btn"></div>
+            <div class="fa-solid fa-bars" id="menu-btn"></div>
+            <!-- กำหนดรูปแบบ icons ; fa-solid (รูปแบบ style) , fa-search (ชื่อ icon ที่จะใช้) -->
+            <!-- หาจาก web : font-awesome -->
+
+        </div>
+
+        <!-- <div class="nav-icons">
+            <a href="#search"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAftJREFUSEu1lUurTQEUgL8vMtBFUR4TIWHgFSUDV3GLUKYexYAUhQFl4AeQCd0uYUAhKT9ARgohE6RElBIZkEvk/Vha2VfnPvbZu+45a3jOPuvb6/GtI20O25yfUkBETAU2AWuBBcWL3AeuAJfUV3VebhAgIsYCF4D1TRIEcBnYpn5pBuoHiIjRwF1gLvAdOA10q88zSUTMAPYBO4BRxbOd6s8yyEDAeWAL8BJYrT4e6ocRMR+4CkwBjqr7KwERMQ94CPwClqjZ79KIiOXAdeAHMF19PdTD/yuIiB5gN3Bc3VNngBFxEdgMHFQPVwGeATOz/+qjmoAVwDXgppoVDYrGCj4DOeQR6p+agPHAO6BXnVAF+AiMATrUhFVGRHQAn4C36sQqwINCqMXqvcrs/9Z2KXAn26R2VQGOAAeAU+qumoBzwFagR91bBZgFPAF+11zTTuBGkbS06oGinUn9gRfAKvVpiWgLC9Empe3qzkrRilPQeCq+ASeBY2qanT3PKvNUbAdGFklzBml9Drt8Tfu+iYhxQAq0rskcPgCHgI3AIiCtX6nm5/2i2bmeVli6Bsjb8xXI7boNnFDfR0R6kKLlOc8t7FJ7GwnD/sMpILeAOUBeg2Xqmz7IsAHFbFKy3KjZOR/1bEsBBWQysEHtbmmLqoRsSYuaQdoO+AvzmbYZWyFxxwAAAABJRU5ErkJggg=="/></a>
+            <a href="#shopping-cart"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAW9JREFUSEvNlS9MllEUh59nDoNGNkdzZGkGSSaLgUagyDAxsVBkJDaim1EZgTG1OILNQCGYnAQTBIvFwqbBsREY4efu9n3s84P3D3v9nKe84fzuec65v3vvKyMOR1yffwdIkt40J8CWuvw3pjufYADQr/tA3esKubBFSVaA58AHdWYUgHHgCLgG3Fa/d4FcanKSt8CjDoV31LmyvgowDXzqADhUpyoBJZHkALgDLKhv2sCSFN08sKoWH6vvQZJFYBPYV+81AZLcBH4C14EJ9UcT4AZQROV7V/1SB0nyGNgGdtWHfW3tTU7yEngKvFZLgcpI8hG4D8ypO20BxYPixSlwSz2+jJBkEvgG/OrpzloBemb3O3umvqgArANrxTP1yaCm8bFLUs7zuyaTe/lp9fNVAWPAV6BsQ128V2eHBY0TtOy8UtYKkOQVsARsqOVUnUddrvYeDBXp/ytQ/2hq8Jkfzl0FMNoJuvjQyoP/GvAbwaCDGboeRcIAAAAASUVORK5CYII="/></a>
+            <a href="#register"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjVJREFUSEu1lT1vE0EQht+5iynujBV7ziYCQZMCSip+AHICJqIkiIpfgITAUqgQ6QjCgoKelo+SRIkIHyUtHaJIAyIQzJ4t4zshx3eD1hBkO3c+c5G33Zn3eWd2Z5cw4UUT1sdYAM91LwK4A5HZniGiLQC37UJhLclgIqDtukskcjdKSIBqlrk2CjIS0FbqHAEbAL6JyBLC8GVPzDDmiWgFwIyIlLOO8zoOMhLgKbUJoEzAZYv5Wb+Ir9SiAE8BrNvMF9ICGgCmrSA4TKVSu1+k1Wqxubv7A8C2zXwsLWAHQCnIZJxcLqdiADs280xagO75HAGLFvPzmBZt2MyVVICBQyaqSqezaZimKURzRHQPwJEDHbJ25St1QwAtZg65DAioWswPU1/TvcRWvX7SNIybAOYh0gXRmyAMa7li8eOBBy1JIGk/dg4ajcb0oTDUrs8AOK1v05DYdwDvAbzzw7BWLBZ/RsEiAZ7rViDyWB9iksO/+9sicjXrOK+G4/cBPNddgMhqL1DkBUSWO1NTW/l8vtmf3Kuw252FYSwDWOiFA5Uss35a/q0BQLPZzGeC4IN2TiIrluPcGqcCX6n7Auh2fv0FnGLm1l7eAMBX6roAD4jorVUonB1H/E+hQr7r6qEsk8g1y3EeRQI8pfSDdilpeKLAbaXOE7AuwJMs85U4wCcAxzuGkR/ueVI1Xr1+FIbxBcBnm/lEHED0hs2c+BFFAT2l9uWnEkqqJvYW/U/iuLETr+A3vaXkGQdP5hMAAAAASUVORK5CYII="/></a>
+            <a href="#menu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFFJREFUSEvtlEkKADAIA83/H52eu1APZQShnquTBaqAR/D9+IA04fqIbDuVdXkgaRK9OcABL+pPu/Ud4A7wDnAAHlF/AN4BDujfwXewJoD/pgNrVBgZX2h0sgAAAABJRU5ErkJggg==" id="menu"/></a>
+        </div> -->
+        <div class="register-form">
+            <a href="#" class="logo">
+                <img src="image\icon.jpg" alt="">
+            </a>
+            <!-- <div class="register-icons">
+                <div class="fa-solid fa-facebook" id="facebook-btn"></div>
+            <div class="fa-solid fa-instagram" id="instagram-btn"></div>
+            <div class="fa-solid fa-line" id="line-btn"></div>
+            </div> -->
+            <!-- <div class="fa-solid fa-facebook" id="facebook-btn"></div>
+            <div class="fa-solid fa-instagram" id="instagram-btn"></div>
+            <div class="fa-solid fa-line" id="line-btn"></div> -->
+            <h3><a href="#">Enter your email to join us or sign in</a>
+                <h3>
+                    <h4>รับส่วนลด และสินค้าเฉพาะสมาชิก เมื่อคุณลงทะเบียนกับ Pattani Fishing</h4>
+                    <div class="register-icons">
+                        <a href="https://www.facebook.com/" class="fa-brands fa-facebook" id="facebook-btn"></a>
+                        <a href="https://www.instagram.com/accounts/emailsignup/" class="fa-brands fa-instagram"
+                            id="instagram-btn"></a>
+                        <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1397264795%26redirect_uri%3Dhttps%253A%252F%252Fcreator.line.me%252Fsignup%252Fline_callback%26state%3DEzGHjCqHpa5h9hG7CNbtk2COjR8VhmWf%26scope%3Dprofile&loginChannelId=1397264795&loginState=fKvxoXycv9lAmP0JGU1MEX#/"
+                            class="fa-brands fa-line" id="line-btn"></a>
+                        <!-- <div class="fa-brands fa-facebook" id="facebook-btn" ></div>
+                <div class="fa-brands fa-instagram" id="instagram-btn"></div>
+                <div class="fa-brands fa-line" id="line-btn"></div> -->
+                    </div>
+                    <input type="search" id="register-box" placeholder="put your email here...">
+                    <label for="register-box" class="fa-solid fa-search"></label>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fa-solid fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 1 " alt="">
+                <div class="content">
+                    <h3>cart item 1</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 1</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 2 " alt="">
+                <div class="content">
+                    <h3>cart item 2</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 2</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 3 " alt="">
+                <div class="content">
+                    <h3>cart item 3</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 3</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 4 " alt="">
+                <div class="content">
+                    <h3>cart item 4</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 4</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 5 " alt="">
+                <div class="content">
+                    <h3>cart item 5</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 5</div>
+
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fa-solid fa-times"></span>
+                <img src="#รูปสินค้าชิ้นที่ 6 " alt="">
+                <div class="content">
+                    <h3>cart item 6</h3>
+                    <div class="price">ราคาสินค้าชิ้นที่ 6</div>
+
+                </div>
+            </div>
+            <a href="#" class="btn">check out</a>
+
+        </div>
+
+
+    </header>
+    <!-- header section (end) -->
+
+    <!-- section home (start) -->
+
+    <main>
+        <div class="home-contact">
+            <div class="location">
+                <!-- ทำ google map แปะลงไปซะ!!! -->
+                <!-- <a href="#"><img src="#" alt=""></a>
+                <a href="#"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIQAhAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECAwQGB//EADoQAAEDAwIEAwcBBAsAAAAAAAEAAgMEBREhMRITQVEGImEUMkJxgZGhUgcVgpIWIyQzQ1NisdHh8f/EABkBAAIDAQAAAAAAAAAAAAAAAAIDAAEEBf/EACIRAAICAgICAwEBAAAAAAAAAAABAhEDEiExBBMiQWFRQv/aAAwDAQACEQMRAD8A7BJIplzzu9CSKSYqUC5DFRKkoORCnIg5VOWhsMkvuMc75BaGWeskGkTh80SFSkgS5VORmSxVw/wsrDU26rh/vIXAd0xMUwe5VOVz2kaEKlyNCmVOVZVjlW5GhbKyoFTKiUaAZFJOmRA2doUyWUy5qR3HISSkxjnu4WNJJ7I9bbIABJVansiUbM88ij2B6ainqTiNhweqMUfh9ocHTuyeyMtbHGAyMAegV48oTYwX2ZJ5pPopipoYGhrI2tx2CdzgAne5Y6ibA3R8dIU2+2WSVACyy1DDoQD81hnnPdY5Kg90Wov2NdF1bSUlUCHxhpPxNC5u5WqSn88fnj7jojD6j1VYqsaOILT3U1/gcct8M5RwVbkduNuDwZqYb7tCCPaWkggg+qJBNopKgVMqBRoWxkykkiAs7EqUMT5pAyMZcVBdJ4foxHDz3+87b5LnJHVyZKRotlsipGh7wHSY3PRX1lbHTsJLhlZLpdY6ZmAdVzkD5rzXNi4iGk5PoFcsij8YlYvGlkXsycJHT2ioNYZJj7gPC3K2VFSyL3nAdyToEqanZSU7YYm4a0aLy/8AaNcbiLoKVj5YadsTpCY4w87Hh0OmpGuc4HTVHylqZ/jOba6PTeMSMDmnIPULBVHdAf2V11bcPCbn3EgviqXxseBjiaA0/wC5I+iPVJaSQCjihOQE1B+yHSTZdgFP4quLLPZ6itlGQweUd3E4A+5C81g8T1Bu5p552tJeGsnhn5sLj290HHTP4TBeOGys9Fc84WaeQ4Kso3uqaYPezgeMte39LgcEKqqYQCiQP2X2uuEmY37hW3K2sqWGSIASenVcs+Z9PU8xnw7/ACXW2ysbUwAg9FVq6GzxNRUkcpKwscWuGCNwqiuhvtGHDnxjUe8ufI1TEKsZJOkrKOuG4XWSyintjCz9K5JHKKrjqaMU0jgHtGBnqFgdo6L5aOZrKiSomcXZOq6LwdCGGV7h5tAqJLexjieHVXW+ojopxkjDtClRglKzZn8n2YtIqjoaqYwxlwCwisM0TubEHsxq0gHK3PLZGdCCFkkDWDDdlo255ObS165MVBcbfJb5YjGy3Nje5vKOI/XiHTB3Qu1zQzRuqn1rnnic3lk8IaMnBI31GDn1XQl8XJDXNacdwhVXBTSycUkMbz3cwFElbtAvJrBx/pmfS2bxXQS01aySWCOXzcLizLmnTBG4WU+CvBsYDf3YMtIIJnkzkfxIlHJFAwsjAYP9OiE1jnueSHaIpNphYIRkmroLSRU0TOGFoDQg1xDcHCj7QWswXLDV1OQdUViHj54A9S3imI9FfZ6s0tTy3Ehjjoo07edUu9GlZqlvDJkaFIySp2jr+JiWSDhI7OThliOdiFy1bByJ3Mxp0Rmz1XtFGA4+duhWW9MBDX9tFpxy2VnJz4nim4sEYSTpJog6lIHBTJLJRt2N9vZNW1LIBK4A6k52C33K3UsLAIi4PHUnOUKt1UaOrZN8I0djsuiqom1kIex2WnUHuhfBLbYPjqp6aFjYxzG41BOv0Vcl4jPlf5HfpcMFUSSclxilxlu3qFVLJHIOGVrZBtgj6fkrPzZuUFXRZLcm4OHD7rFNceufyoS0VC/Zjmagf1byN9tNljltdKSQ2pqRrjdp169OifGVCpYk/ok+4+v5VElxyN1TJaoSMtrJ9sjIb12VEtrpgCTU1LtCdOHbp0R7ID0v+CmuGeqwy1Ze7hbuVdNRUUZIJldjTzP/AOllIghdxQt4T34iURHHUK2tvLkaHbuyqK+PDyo0VQZQSD52noiMoZUjjA1+IIMsLD8XyPXPkz2J5ZM9vQtWy5uDoiPVUwMbBktbglU1MvF5c9UWCLSoV52SOSeyMmE6lhMtZzbOlTKeE2FnofsRRC13F1K7lyZdC7cfp9QsPClhRxT4JtXIbfQsr6uFw80R1yFjvFilhy+jm4OvC/UIh4WaS6cnYADHqtN7kwA0dllnDU3Yc0nJUee1dfWUL/7RTZAJdlhyOwWL9+058r3FmnCcjpufuUcuLwXZdg66ZGnzKC1NJBKPcBz8TtM/Xv6K40beyuS8xPORKMkk77E/8BVPucRacOGw0+WwWGS2xicsY0/MrQ2yt4BkJyjZmy5owdFUlc15wHZ6aflY6qSeOHmvhk5edXY0CK26KGnqgydoxnQrum26GakI5YdG5uCMaEK13QnJlpWjzuyVjCXtLXZcdNEc1B00Qi6UjbNczATwsd5on7advorI60hmAWu9eqYpVwxOTE8nygE3Ped3FV4T07jJHxH6eqs4U1UYptp0yrCSt4UysXZ0ham4VqMablpIzYzcKXCr+Wly1ZNgv4ZwGzjrkLJf5JPaHNGcbBK0zezVQLjhr/KUUuFNFNkuGqyZ7s3+JNJ2zzmvlkbI4MHG4nOyyGOepj4ZG4zqV2ktuga4nAysssMTNgFIUzXmzy/yAKOiLMFwyVtMI4dloe9jeyyy1DQN1pRzZbSYPraUPadAi9juc1PQciRvGAdDnohj5eY7hbkk9AiMEBjiDca7lVqplyyPHEBeLoJLiYZCMNjJ+ev/AIglPbajmGME5Hc6Fdy6LO4yockA6NA+QReskPOcY1Rgo4HRU7Wu3VvAtRj9E3LTkqMMpuTtmbgCZauWmUBs6oxBR5XorXE9CoHj6OSLG6/pDk+ibkpO5vR4VThU9JB9lNgtP0s5K1xVDuXy5DkdHdkLcKz4ZW/yqh7Ll8NQwfwIJfNUxkLg7TK71XvopC2ZpHY90BN5bPK2KMkvccAdyi9ZS3Kqh5U0tO9o2LotR+UE/o1cI52zQVMLXtOW5jJwfulQxNHSflYnH9FcXVlJCZZoHtZnGT3Q1s9ROf0hGJLZfJSBVVcE8e/AY8a91F9quXDiNtM09zlPUKMj8iNX9m6y0IZAJ5cF7ts9AiRY3uFzwovELWhoq6cADAAYn9kv/Wqh/lTlGkc/JNzlYeLW9wolre6BikvfWpi/lUvZbv8AFOz6BFQuwuWjuFEhvcIYKa5dZWpxTV3WQK6B2COG9wksApqz/MSUomx2RTJJJA4ZMmSULEQoEJ0laKZAhRICSSspkHAJsDskkrBI4HZMQOySSsoiWhNwjskkrBYxaOyjwjOySShQuEdkkklCj//Z" alt=""></a> -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1796418774757!2d101.25172937373227!3d6.869065819053776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b306aa3bcb1ad3%3A0xd90828bb5b2596ff!2zMTI5IOC4li4g4Lib4Lix4LiV4LiV4Liy4LiZ4Li14Lig4Li04Lij4Lih4Lii4LmMIOC4leC4s-C4muC4pSDguK3guLLguYDguJnguLLguLDguKPguLkg4Lit4Liz4LmA4Lig4Lit4LmA4Lih4Li34Lit4LiH4Lib4Lix4LiV4LiV4Liy4LiZ4Li1IOC4m-C4seC4leC4leC4suC4meC4tSA5NDAwMA!5e0!3m2!1sth!2sth!4v1701000953474!5m2!1sth!2sth"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="address">
+                <!-- ที่อยู่/เบอร์ติดต่อ , ลิงก์ Fanpage : FB IG Line -->
+                <H1>Address</H1>
+                <p>129 ถนน ปัตตานีภิรมย์ ตำบลอาเนาะรู อำเภอเมืองปัตตานี Pattani, Thailand 94000</p>
+                <div class="picture">
+                    <a href="#"><img
+                            src="data:image/jpeg;base64,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"
+                            alt=""></a>
+                    <a href="#"><img src="#" alt=""></a>
+                    <a href="#"><img src="#" alt=""></a>
+                </div>
+                <h1>Social media</h1>
+                <div class="contact-media">
+                    <div class="contact-facebook">
+                        <a href="https://www.facebook.com/pattanifishing/" class="fa-brands fa-facebook"
+                            id="facebook-btn"> Pattani Fishing</a>
+                    </div>
+                    <div class="contact-instagram">
+                        <a href="https://www.instagram.com/pattanifishing.club/" class="fa-brands fa-instagram"
+                            id="instagram-btn"> Pattanifishing.club</a>
+                    </div>
+                    <div class="contact-line">
+                        <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1397264795%26redirect_uri%3Dhttps%253A%252F%252Fcreator.line.me%252Fsignup%252Fline_callback%26state%3DEzGHjCqHpa5h9hG7CNbtk2COjR8VhmWf%26scope%3Dprofile&loginChannelId=1397264795&loginState=fKvxoXycv9lAmP0JGU1MEX#/"
+                            class="fa-brands fa-line" id="line-btn"> Pattani Fishing</a>
+                    </div>
+                    <div class="contact-phone">
+                        <a href="#" class="fa-solid fa-phone" id="phone-btn"> 088-891-1777</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- section home (end) -->
+
+
+    <!-- custom js เพิ่มลูกเล่นให้ web -->
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
